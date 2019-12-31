@@ -28,6 +28,8 @@ This provides full customization around the internals of the library and allows 
 Typescript React
 
 ```tsx
+// components/TestComponent.tsx
+
 import { makeColor, makeSpace, makeSize } from "@typesafe-design/utils";
 
 export const TestComponent = () => (
@@ -44,7 +46,7 @@ export const TestComponent = () => (
 );
 ```
 
-DOM
+DOM Output
 
 ```html
 <div
@@ -59,51 +61,49 @@ DOM
 - **CSS-in-JS Library Agnostic** - Seeing as these are only typed variables and configuration values, we can easily use this in any CSS-in-JS library. We like `styled-components` & `styled-jsx` & `emotion`
 - **Only 2 peer-dependencies** - Typescript (naturally) and polished (for some utilities to ease the load on modular scale, rem and em transformations)
 - **Refactor with ease** - The typescript compiler will let you know where your small refactor will break and what files / lines need to be updated
+- and much more!
 
-## FAQs
+## Getting Started
 
-Let's see if we can't convince you...
+This repository is a lerna based mono-repo that contains several packages. The core of the design-system can be found in the `packages/design-system` directory.
 
-### Why should I be using a typesafe design system?
+If you're looking to develop the design system without feedback, open up two terminal sessions and run one of the below in each
 
-The real question is _why not_ use a typesafe design system? Think about some of the things that we encounter as front-end developers.
+```bash
+# terminal 1
+npm run dev:ds
 
-- Manually converting `px` values to `em` or `rem`
-- 4 or 5 seemingly different yet similar colors of red
-- `ctrl + f` hex values across projects or repositories
-- Wondering if the `17px` spacing value in InVision is correct or not
-- ... more to come ...
+# terminal 2
+npm run dev:components
+```
 
-The benefits of using utility based design system that utilizes type-saftey is that you can forget about those things above. Need to make a size? Use the `makeSize` utility and pick the value that appears.
+### Design System
 
-### What are the main benefits of using a typesafe design system?
+| Script             | Description                         |
+| ------------------ | ----------------------------------- |
+| `npm run dev:ds`   | Run the design system in watch mode |
+| `npm run build:ds` | Build the design system             |
 
-#### Refactoring is easy
+### Components
 
-Thanks to typescript, changing an interface or updating a value is as simple as making the change and then letting the compiler tell you where your changes are going to fail. This makes refactoring as easy as changing one value and letting typescript do the rest of the work.
+| Script                               | Description                               |
+| ------------------------------------ | ----------------------------------------- |
+| `npm run dev:components`             | Build the components in watch mode        |
+| `npm run dev:components:storybook`   | Launch storybook in development mode      |
+| `npm run build:components`           | Build the components for distribution     |
+| `npm run build:components`           | Build the component storybook application |
+| `npm run build:components:storybook` | Build the component storybook application |
 
-#### Utility based implementation
+### Presentation
 
-All static values such as colors, line heights, sizes, etc... are worked out in advance between design and development, configured, and then never have to be worried about again. The utilities implement those decisions in a seamless way through always providing you with the proper values.
-
-#### Easily implement significant change
-
-The companies brand changed and you need to update your vertical rhythm or change primary color or increase your baseline grid? Update the base configurations and they will automatically be applied to the resulting system
-
-#### Reduced mental load = increased time savings
-
-The utilities reduce the mental load on the individual engineer who is transforming the design to the code. Static values can be passed to the utilities and the utilities do the proper conversions based upon the configuration values. e.g. manually converting pixel values to rems or ems.
-
-#### Reduce / virtually eliminate visual inconsistency
-
-#### Reduce / virtually eliminate visual design system defects
-
-Never have to worry about if a shade of color is correct. Opening the inspector to check the hex value is now a thing of the past.
-
-### Why wouldn't I just use Material or Bootstrap?
+| Script                       | Description                                       |
+| ---------------------------- | ------------------------------------------------- |
+| `npm run dev:presentation`   | Build the presentation in dev mode                |
+| `npm run build:presentation` | Build the presentation for distribution & hosting |
 
 ## Documentation
 
 - [Architecture](./docs/architecture.md) - Read more about how this library is organized and the parts that make up and compose the utilities
 - [Deep Dive into Sizing](./docs/deep-dive.md) - Sizing is bar none one of the hardest things to get right and stay right. Learn how we derived a scalable sizing model based upon a few key configuration points
 - [To-do's](./docs/todo.md) - View the checklist of outstanding items in order to fully stabilize the concepts
+- [FAQs](./docs/faqs.md) - Check out some of common questions we have gotten surrounding the use of a typesafe design system
