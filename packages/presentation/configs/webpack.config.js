@@ -1,24 +1,23 @@
-/* eslint-disable */
-
 var path = require("path");
 var webpack = require("webpack");
 
 var rootDir = path.resolve(__dirname, "../");
 var srcDir = path.join(rootDir, "./src");
-var dstDir = path.join(rootDir, "./dist");
-var indexFile = path.join(srcDir, "./index.js");
+var distDir = path.join(rootDir, "./dist");
+var indexFilePath = path.join(srcDir, "./index");
+var tsConfigFilePath = path.join(rootDir, "./tsconfig.json");
 
 module.exports = {
   mode: "development",
   devtool: "cheap-module-source-map",
   entry: [
-    "@babel/polyfill",
+    // "@babel/polyfill",
     "webpack-hot-middleware/client",
     "react-hot-loader/patch",
-    indexFile
+    indexFilePath
   ],
   output: {
-    path: dstDir,
+    path: distDir,
     filename: "bundle.js",
     publicPath: "/dist"
   },
@@ -27,12 +26,14 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   resolve: {
-    alias: { "react-dom": "@hot-loader/react-dom" }
+    alias: { "react-dom": "@hot-loader/react-dom" },
+    extensions: [".ts", ".tsx", ".css", ".js"]
   },
   module: {
     rules: [
       {
         test: /\.md$/,
+        exclude: /node_modules/,
         use: [
           {
             loader: "html-loader"
@@ -47,11 +48,14 @@ module.exports = {
         ]
       },
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         use: [
           {
-            loader: "babel-loader"
+            loader: "awesome-typescript-loader",
+            options: {
+              configFileName: tsConfigFilePath
+            }
           }
         ],
         include: srcDir
@@ -70,6 +74,12 @@ module.exports = {
       {
         test: /\.svg$/,
         use: [
+          {
+            loader: "@svgr/webpack",
+            options: {
+              dimensions: false
+            }
+          },
           {
             loader: "url-loader",
 
