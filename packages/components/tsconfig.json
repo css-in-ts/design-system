@@ -1,0 +1,8 @@
+{
+  "extends": "@typesafe-design/typescript/tsconfig.react.json",
+  "include": ["src", "types"],
+  "compilerOptions": {
+    "types": ["webpack-env"]
+  },
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

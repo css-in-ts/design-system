@@ -1,0 +1,13 @@
+{
+  "version": "independent",
+  "packages": ["packages/**"],
+  "npmClient": "npm",
+  "npmClientArgs": ["--no-package-lock"],
+  "command": {
+    "publish": {
+      "ignoreChanges": ["*.md", "*.spec.ts", "*.spec.tsx"],
+      "message": "chore(release): Publish",
+      "conventionalCommits": true
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "extends": "@typesafe-design/typescript/tsconfig.react.json",
+  "include": ["src/configs", "src/types", "src/utils"],
+  "compilerOptions": {
+    "outDir": "./",
+    "types": ["node", "jest", "react", "react-dom", "styled-components"]
+  },
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
