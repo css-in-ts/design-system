@@ -11,7 +11,7 @@ module.exports = {
   mode: "development",
   devtool: "cheap-module-source-map",
   entry: [
-    // "@babel/polyfill",
+    "@babel/polyfill",
     "webpack-hot-middleware/client",
     "react-hot-loader/patch",
     indexFilePath

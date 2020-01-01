@@ -24,7 +24,7 @@
     "trailingComma": "es5"
   },
   "name": "@typesafe-design/components",
-  "author": "Drew DeCarme",
+  "author": "Drew DeCarme (drew@imaginedelements.com)",
   "module": "dist/components.esm.js",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.26",

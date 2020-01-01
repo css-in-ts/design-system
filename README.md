@@ -1,6 +1,6 @@
 # Typesafe Design System
 
-A set of utilities that empower anybody to implement a completely custom, typesafe design system at scale.
+A methodology that produces set of utilities designed to implement a completely custom, typesafe design system at scale.
 
 ## The problem
 
