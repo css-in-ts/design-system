@@ -1,8 +1,8 @@
-import React, { FC } from "react";
-import styled, { SimpleInterpolation, css } from "styled-components";
-import { Layout } from "@typesafe-design/design-system/types/primitive";
+import React, { FC } from 'react';
+import styled, { SimpleInterpolation, css } from 'styled-components';
+import { Layout } from '@typesafe-design/design-system/types/primitive';
 
-import { StyledButton } from "./Button";
+import { StyledButton } from './Button';
 
 interface ButtonGroupProps {
   layout?: Layout;
@@ -27,7 +27,7 @@ const buttonGroupStyleMap: { [key in Layout]: SimpleInterpolation } = {
       margin-top: 1rem;
     }
   `,
-  standalone: css``
+  standalone: css``,
 };
 
 const StyledButtonGroup = styled.div<Required<ButtonGroupProps>>`
@@ -35,6 +35,6 @@ const StyledButtonGroup = styled.div<Required<ButtonGroupProps>>`
 `;
 
 export const ButtonGroup: FC<ButtonGroupProps> = ({
-  layout = "stacked",
-  children
+  layout = 'stacked',
+  children,
 }) => <StyledButtonGroup layout={layout}>{children}</StyledButtonGroup>;

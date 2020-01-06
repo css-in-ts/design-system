@@ -3,11 +3,10 @@ export type ColorApplication =
   | "primary"
   | "secondary"
   | "accent"
-  | "grayscale"
-  | "lightscale";
-export type ColorStatic = "dark" | "light";
-
+  | "gray"
+  | "light";
+export type ColorFixed = "dark" | "light";
 export type ColorScalable = ColorApplication | ColorStateful;
-type Color = ColorScalable | ColorStatic;
+type Color = ColorScalable | ColorFixed;
 
 export default Color;

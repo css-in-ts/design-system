@@ -1,31 +1,28 @@
-import React, { FC } from "react";
-import styled, { css } from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library, IconName } from "@fortawesome/fontawesome-svg-core";
-import { fal } from "@fortawesome/pro-light-svg-icons";
-import { fas } from "@fortawesome/pro-solid-svg-icons";
-import { fab } from "@fortawesome/free-brands-svg-icons";
+import React, { FC } from 'react';
+import styled, { css } from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library, IconName } from '@fortawesome/fontawesome-svg-core';
+import { fal } from '@fortawesome/pro-light-svg-icons';
+import { fas } from '@fortawesome/pro-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 import {
   ColorProperties,
-  SizeProperties
-} from "@typesafe-design/design-system/types/composite";
-import {
-  makeColor,
-  makeFont
-} from "@typesafe-design/design-system/utils";
+  FontProperties,
+} from '@typesafe-design/design-system/types/composite';
+import { makeColor, makeFont } from '@typesafe-design/design-system/utils';
 
 library.add(fal, fas, fab);
 
 export type IconProps = {
   icon: IconName;
-  iconWeight?: "fab" | "fal" | "fas" | undefined;
-  iconSize?: SizeProperties;
+  iconWeight?: 'fab' | 'fal' | 'fas' | undefined;
+  iconSize?: FontProperties['fontSize'];
   iconColor?: ColorProperties;
   spin?: boolean;
 };
 
 const StyledIcon = styled.div<
-  Required<Omit<IconProps, "icon" | "iconWeight" | "spin">>
+  Required<Omit<IconProps, 'icon' | 'iconWeight' | 'spin'>>
 >`
   display: flex;
   flex-direction: row;
@@ -33,9 +30,9 @@ const StyledIcon = styled.div<
   align-items: center;
 
   ${({ iconSize }) => css`
-    height: ${makeFont({ fontSize: iconSize.size }).lineHeight};
-    width: ${makeFont({ fontSize: iconSize.size }).lineHeight};
-    font-size: ${makeFont({ fontSize: iconSize.size }).fontSize};
+    height: ${makeFont({ fontSize: iconSize }).lineHeight};
+    width: ${makeFont({ fontSize: iconSize }).lineHeight};
+    font-size: ${makeFont({ fontSize: iconSize }).fontSize};
   `}
 
   & > svg {
@@ -52,10 +49,10 @@ const StyledIcon = styled.div<
 
 export const Icon: FC<IconProps> = ({
   icon,
-  iconWeight = "fal",
-  iconSize = { size: "sm" },
-  iconColor = { type: "scalable", color: "grayscale", scale: 2 },
-  spin = false
+  iconWeight = 'fal',
+  iconSize = 'sm',
+  iconColor = { scalable: { color: 'gray' } },
+  spin = false,
 }) => (
   <StyledIcon iconSize={iconSize} iconColor={iconColor}>
     <FontAwesomeIcon icon={[iconWeight, icon]} spin={spin} />

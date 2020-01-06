@@ -1,45 +1,42 @@
-import React, { FC } from "react";
-import { IconName } from "@fortawesome/pro-light-svg-icons";
+import React, { FC } from 'react';
+import { IconName } from '@fortawesome/pro-light-svg-icons';
 import {
   HTMLButton,
-  SizeProperties,
-  ColorProperties
-} from "@typesafe-design/design-system/types/composite";
+  ColorProperties,
+  FontProperties,
+} from '@typesafe-design/design-system/types/composite';
 
-import { Icon, Copy, IconProps } from "../typography";
+import { Icon, Copy, IconProps } from '../typography';
 
-import styled from "styled-components";
-import {
-  makeReset,
-  makeSpace
-} from "@typesafe-design/design-system/utils";
+import styled from 'styled-components';
+import { makeReset, makeOutset } from '@typesafe-design/design-system/utils';
 
 type ButtonActionProps = HTMLButton & {
   label: string;
-  size?: SizeProperties;
+  size?: FontProperties['fontSize'];
   icon?: IconName | undefined;
   color?: ColorProperties;
-  iconWeight?: IconProps["iconWeight"];
+  iconWeight?: IconProps['iconWeight'];
 };
 
 const StyledButtonAction = styled.button`
-  ${makeReset("button")};
+  ${makeReset('button')};
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 
   & > div {
-    margin-right: ${makeSpace({ value: 4 })};
+    ${makeOutset({ right: 4 })}
   }
 `;
 
 export const ButtonAction: FC<ButtonActionProps> = ({
   label,
-  size = { size: "sm" },
+  size = 'sm',
   icon = undefined,
-  iconWeight = "fas",
-  color = { type: "scalable", color: "secondary" },
+  iconWeight = 'fas',
+  color = { scalable: { color: 'accent' } },
   ...restButtonProps
 }) => (
   <StyledButtonAction {...restButtonProps}>

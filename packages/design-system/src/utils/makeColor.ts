@@ -2,73 +2,62 @@ import { mix } from "polished";
 
 import {
   ColorProperties,
-  ColorTypes,
   ColorScales,
   ColorBlendRatios,
   ColorHex
 } from "../types/composite";
-import { ColorScalable, ColorStatic } from "../types/primitive/color.primitive";
+import { ColorScalable, ColorFixed } from "../types/primitive/color.primitive";
 import { colorConfig } from "../configs";
 
 type ColorMapScalable = { [key in ColorScalable]: ColorScales };
-type ColorMapStatic = { [key in ColorStatic]: ColorHex };
-type ColorMapCustom = any;
-
-type ColorMaps = ColorMapScalable | ColorMapStatic | ColorMapCustom;
-type Colors = { [key in ColorTypes]: ColorMaps };
+type ColorMapFixed = { [key in ColorFixed]: ColorHex };
 
 const createColor = (
   scaler: ColorBlendRatios,
   color: ColorScalable
 ): ColorHex =>
-  mix(scaler, colorConfig.static.light, colorConfig.scalable[color]);
+  mix(scaler, colorConfig.fixed.light, colorConfig.scalable[color]);
 
 const createColorScale = (hex: ColorScalable): ColorScales => [
-  createColor(0.8, hex),
-  createColor(0.6, hex),
-  createColor(0.4, hex),
-  createColor(0.2, hex),
-  colorConfig.scalable[hex]
+  colorConfig.scalable[hex],
+  createColor(0.25, hex),
+  createColor(0.5, hex),
+  createColor(0.75, hex)
 ];
 
 const scalableColorMap: ColorMapScalable = {
   primary: createColorScale("primary"),
   secondary: createColorScale("secondary"),
   accent: createColorScale("accent"),
-  grayscale: createColorScale("grayscale"),
-  lightscale: createColorScale("lightscale"),
+  gray: createColorScale("gray"),
+  light: createColorScale("light"),
   success: createColorScale("success"),
   warning: createColorScale("warning"),
   error: createColorScale("error")
 };
 
-const staticColorMap: ColorMapStatic = {
-  light: colorConfig.static.light,
-  dark: colorConfig.static.dark
-};
-
-const colors: Colors = {
-  scalable: scalableColorMap,
-  static: staticColorMap,
-  custom: (color: any) => {
-    console.warn(
-      "You're attempting to use a custom color that falls outside of the design system. This color will not be regulated by the design system any longer and thusly isn't type-safe. You'll be required to update this value manually for any subsequent changes. Use with cation."
-    );
-    console.log(color);
-    return color;
-  }
+const fixedColorMap: ColorMapFixed = {
+  light: colorConfig.fixed.light,
+  dark: colorConfig.fixed.dark
 };
 
 export const makeColor = ({
-  type,
-  color,
-  scale = 4
+  fixed,
+  scalable,
+  custom
 }: ColorProperties): ColorHex => {
-  if (type === "scalable") {
-    return colors[type][color][scale];
+  if (scalable?.color) {
+    return scalableColorMap[scalable.color][scalable.scale || 0];
   }
-  if (type === "static") {
-    return colors[type][color];
+  if (fixed) {
+    return fixedColorMap[fixed];
   }
-  return colors[type](color);
+  if (custom) {
+    console.warn(
+      "You're attempting to use a custom color that falls outside of the design system. This color will not be regulated by the design system any longer and thusly isn't type-safe. You'll be required to update this value manually for any subsequent changes. Use with cation."
+    );
+    console.log(custom);
+    return custom;
+  }
+  return "";
 };

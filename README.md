@@ -81,15 +81,15 @@ npm run dev:components
 
 | Script             | Description                         |
 | ------------------ | ----------------------------------- |
-| `npm run dev:ds`   | Run the design system in watch mode |
+| `npm run start:ds` | Run the design system in watch mode |
 | `npm run build:ds` | Build the design system             |
 
 ### Components
 
 | Script                               | Description                               |
 | ------------------------------------ | ----------------------------------------- |
-| `npm run dev:components`             | Build the components in watch mode        |
-| `npm run dev:components:storybook`   | Launch storybook in development mode      |
+| `npm run start:components`           | Build the components in watch mode        |
+| `npm run start:components:storybook` | Launch storybook in development mode      |
 | `npm run build:components`           | Build the components for distribution     |
 | `npm run build:components`           | Build the component storybook application |
 | `npm run build:components:storybook` | Build the component storybook application |
@@ -98,7 +98,7 @@ npm run dev:components
 
 | Script                       | Description                                       |
 | ---------------------------- | ------------------------------------------------- |
-| `npm run dev:presentation`   | Build the presentation in dev mode                |
+| `npm run start:presentation` | Build the presentation in dev mode                |
 | `npm run build:presentation` | Build the presentation for distribution & hosting |
 
 ## Documentation

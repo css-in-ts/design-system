@@ -1,58 +1,67 @@
-import React, { FC } from "react";
-import styled, { css } from "styled-components";
+import React, { FC } from 'react';
+import styled, { css } from 'styled-components';
 import {
   HTMLParagraph,
   ColorProperties,
-  SizeProperties,
-  FontProperties
-} from "@typesafe-design/design-system/types/composite";
-import {
-  makeReset,
-  makeFont
-} from "@typesafe-design/design-system/utils";
+  FontProperties,
+} from '@typesafe-design/design-system/types/composite';
+import { makeReset, makeFont } from '@typesafe-design/design-system/utils';
 
 export type CopyProps = HTMLParagraph & {
-  type: "caption" | "text" | "label" | "paragraph";
-  fontSize?: SizeProperties;
+  type: 'caption' | 'text' | 'label' | 'paragraph';
+  fontSize?: FontProperties['fontSize'];
   fontColor?: ColorProperties;
+  lineHeight?: FontProperties['lineHeight'];
   copy?: string | undefined;
 };
 
 const BaseCopy = css`
-  ${makeReset("paragraph")}
+  ${makeReset('paragraph')}
 `;
-const copyFontMap: { [key in CopyProps["type"]]: Partial<FontProperties> } = {
+const copyFontMap: { [key in CopyProps['type']]: Partial<FontProperties> } = {
   paragraph: {
-    fontFamily: "Raleway"
+    fontFamily: 'Raleway',
   },
   caption: {
-    fontFamily: "Raleway"
+    fontFamily: 'Raleway',
   },
   text: {
-    fontFamily: "Raleway"
+    fontFamily: 'Raleway',
   },
   label: {
-    fontFamily: "Raleway",
-    fontWeight: "medium"
-  }
+    fontFamily: 'Raleway',
+    fontWeight: 'medium',
+  },
 };
 
 export const StyledCopy = styled.p<
-  Required<Pick<CopyProps, "fontColor" | "fontSize" | "type">>
+  Required<Pick<CopyProps, 'fontColor' | 'fontSize' | 'type'>> &
+    Pick<CopyProps, 'lineHeight'>
 >`
   ${BaseCopy};
-  ${({ fontSize, fontColor, type }) =>
-    makeFont({ ...copyFontMap[type], fontSize: fontSize.size, fontColor })}
+  ${({ fontSize, fontColor, lineHeight, type }) =>
+    makeFont({
+      ...copyFontMap[type],
+      fontSize: fontSize,
+      fontColor,
+      lineHeight,
+    })}
 `;
 
 export const Copy: FC<CopyProps> = ({
   type,
-  fontSize = { size: "sm" },
-  fontColor = { type: "scalable", color: "grayscale" },
+  fontSize = 'sm',
+  fontColor = { scalable: { color: 'gray' } },
+  lineHeight,
   copy = undefined,
-  children = undefined
+  children = undefined,
 }) => (
-  <StyledCopy type={type} fontSize={fontSize} fontColor={fontColor}>
+  <StyledCopy
+    type={type}
+    fontSize={fontSize}
+    fontColor={fontColor}
+    lineHeight={lineHeight}
+  >
     {copy || children}
   </StyledCopy>
 );

@@ -21,10 +21,10 @@
     "build:components:storybook": "lerna run build-storybook --scope=@typesafe-design/components --stream",
     "build:ds": "lerna run build --scope=@typesafe-design/design-system --stream",
     "build:presentation": "npm run build:ds && npm run build:components && lerna run start --scope=@typesafe-design/presentation --stream",
-    "dev:ds": "lerna run start --scope=@typesafe-design/design-system --stream",
-    "dev:components": "npm run build:ds && lerna run start --scope=@typesafe-design/components --stream",
-    "dev:components:storybook": "npm run build:ds && lerna run storybook --scope=@typesafe-design/components --stream",
-    "dev:presentation": "npm run build:ds && npm run build:components && lerna run start --scope=@typesafe-design/presentation --stream"
+    "start:ds": "lerna run start --scope=@typesafe-design/design-system --stream",
+    "start:components": "npm run build:ds && lerna run start --scope=@typesafe-design/components --stream",
+    "start:components:storybook": "npm run build:ds && lerna run storybook --scope=@typesafe-design/components --stream",
+    "start:presentation": "npm run build:ds && npm run build:components && lerna run start --scope=@typesafe-design/presentation --stream"
   },
   "repository": {
     "type": "git",

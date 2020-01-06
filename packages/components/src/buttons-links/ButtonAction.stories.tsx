@@ -12,22 +12,14 @@ export const defaultWithIcon = () => (
   <ButtonAction label="This is an action button" icon="pencil" />
 );
 export const sizeSm = () => (
-  <ButtonAction label="This is an action button" size={{ size: "sm" }} />
+  <ButtonAction label="This is an action button" size="sm" />
 );
 export const sizeSmWithIcon = () => (
-  <ButtonAction
-    label="This is an action button"
-    size={{ size: "sm" }}
-    icon="share"
-  />
+  <ButtonAction label="This is an action button" size="sm" icon="share" />
 );
 export const sizeMd = () => (
-  <ButtonAction label="This is an action button" size={{ size: "md" }} />
+  <ButtonAction label="This is an action button" size="md" />
 );
 export const sizeMdWithIcon = () => (
-  <ButtonAction
-    label="This is an action button"
-    size={{ size: "md" }}
-    icon="trash"
-  />
+  <ButtonAction label="This is an action button" size="md" icon="trash" />
 );

@@ -36,8 +36,8 @@ export interface FontProperties {
   fontStyle?: FontStyle;
   fontColor?: ColorProperties | undefined;
   custom?: {
-    fontSize: string;
-    lineHeight?: string;
+    fontSize: number;
+    lineHeight?: number;
     fontFamily?: FontFamily;
     fontWeight?: FontWeightName;
     fontStyle?: FontStyle;

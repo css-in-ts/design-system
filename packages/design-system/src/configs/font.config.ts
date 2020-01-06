@@ -40,7 +40,7 @@ export interface FontConfig {
 }
 export const fontConfig: FontConfig = {
   defaults: {
-    fontFamily: "system",
+    fontFamily: "Raleway",
     fontStyle: "normal",
     fontWeight: "regular",
     fontColor: undefined

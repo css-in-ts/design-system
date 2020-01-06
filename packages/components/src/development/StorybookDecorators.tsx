@@ -1,6 +1,6 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode } from 'react';
 
-import { FontFamily } from "./FontFamily";
+import { FontFamily } from './FontFamily';
 
 type AddFont = (storyFn: any) => ReactNode;
 

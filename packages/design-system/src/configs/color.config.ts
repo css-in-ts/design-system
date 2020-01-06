@@ -1,12 +1,12 @@
-import { ColorValueStatic, ColorValueScalable } from "../types/composite";
+import { ColorValueFixed, ColorValueScalable } from "../types/composite";
 
 export interface ColorConfig {
-  static: ColorValueStatic;
+  fixed: ColorValueFixed;
   scalable: ColorValueScalable;
 }
 
 export const colorConfig: ColorConfig = {
-  static: {
+  fixed: {
     light: "#fff",
     dark: "#000"
   },
@@ -14,8 +14,8 @@ export const colorConfig: ColorConfig = {
     primary: "#bf9f5a",
     secondary: "#4e8588",
     accent: "#9ac371",
-    grayscale: "#4a4a4a",
-    lightscale: "#eaecec",
+    gray: "#4a4a4a",
+    light: "#eaecec",
     success: "#29a784",
     warning: "#f8e71c",
     error: "#d0021b"
