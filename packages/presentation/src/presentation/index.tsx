@@ -18,6 +18,8 @@ import {
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
+import {DesignSystems} from "./slides/DesignSystems";
+import {DesignSystemsOnTheWeb} from "./slides/DesignSystemsOnTheWeb";
 
 const images = {
   formidagon: require("../assets/formidable-logo.svg"),
@@ -50,8 +52,11 @@ export const Presentation: FC = () => (
         open the presentation/index.js file to get started
       </Text>
     </Slide>
-    <Slide bgColor="secondary">
-      <Image src={images.formidagon} width={800} />
+    <Slide transition={["slide"]} bgColor="primary">
+      <DesignSystems />
+    </Slide>
+    <Slide transition={["slide"]} bgColor="primary">
+      <DesignSystemsOnTheWeb />
     </Slide>
     <Slide transition={["fade"]} bgColor="tertiary">
       <Heading size={6} textColor="primary" caps>
