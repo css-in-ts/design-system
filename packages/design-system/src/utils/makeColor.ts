@@ -4,7 +4,8 @@ import {
   ColorProperties,
   ColorScales,
   ColorBlendRatios,
-  ColorHex
+  ColorHex,
+  ColorScalePosition
 } from "../types/composite";
 import { ColorScalable, ColorFixed } from "../types/primitive/color.primitive";
 import { colorConfig } from "../configs";
@@ -61,3 +62,47 @@ export const makeColor = ({
   }
   return "";
 };
+
+// can I call makeColor with an empty object?
+// const foo = makeColor({})
+// yessir
+
+// how about multiple keys?
+// const bar = makeColor({ fixed: "dark", custom: "light" })
+// hmm...
+
+// and this?
+// const baz = makeColor({ fixed: "dark", custom: "light", scalable: { color: 'primary' } })
+// so what does that mean?
+
+
+// hmm...
+type ColorConfig =
+  | { type: 'fixed', color: ColorFixed }
+  | { type: 'scalable', config: { color: ColorScalable; scale?: ColorScalePosition } }
+  | { type: 'custom', string: ColorHex  }
+
+// @ts-ignore
+const makeColorV2 = (arg: ColorConfig): ColorHex => {
+  switch (arg.type) {
+    case 'fixed':
+      return fixedColorMap[arg.color]
+    case 'scalable':
+      return scalableColorMap[arg.config.color][arg.config.scale ?? 0]
+    default:
+      return arg.string
+  }
+};
+
+// do all 3 versions compile?
+// const yea = makeColorV2({ type: 'fixed', color: 'dark' })
+// const yep = makeColorV2({ type: 'scalable', config: { color: 'primary' } })
+// const uhHuh = makeColorV2({ type: 'custom', string: 'foo '})
+
+// empty?
+// const buz = makeColorV2({})
+// nope
+
+// how about multiple keys?
+// const quz = makeColorV2({ type: 'scalable', color: 'dark', config: { color: 'primary' } })
+// nay sir
