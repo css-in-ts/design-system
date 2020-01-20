@@ -1,31 +1,11 @@
-import React, { FC } from "react";
-import ReactDOM from "react-dom";
-import Redbox from "redbox-react";
-import { AppContainer } from "react-hot-loader";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Presentation } from './presentation/index';
+import * as serviceWorker from './serviceWorker';
 
-import { Presentation } from "./presentation";
+ReactDOM.render(<Presentation />, document.getElementById('root'));
 
-const CustomErrorReporter: FC<{ error: Error }> = ({ error }) => (
-  <Redbox error={error} />
-);
-
-ReactDOM.render(
-  <AppContainer errorReporter={CustomErrorReporter}>
-    <Presentation />
-  </AppContainer>,
-  document.getElementById("root")
-);
-
-// @ts-ignore
-if (module.hot) {
-  // @ts-ignore
-  module.hot.accept("./presentation", () => {
-    const NextPresentation = require("./presentation").default;
-    ReactDOM.render(
-      <AppContainer errorReporter={CustomErrorReporter}>
-        <NextPresentation />
-      </AppContainer>,
-      document.getElementById("root")
-    );
-  });
-}
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
