@@ -2,8 +2,6 @@ import React, { FC } from 'react';
 import styled, { css } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library, IconName } from '@fortawesome/fontawesome-svg-core';
-import { fal } from '@fortawesome/pro-light-svg-icons';
-import { fas } from '@fortawesome/pro-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import {
   ColorProperties,
@@ -11,11 +9,11 @@ import {
 } from '@typesafe-design/design-system/types/composite';
 import { makeColor, makeFont } from '@typesafe-design/design-system/utils';
 
-library.add(fal, fas, fab);
+library.add(fab);
 
 export type IconProps = {
   icon: IconName;
-  iconWeight?: 'fab' | 'fal' | 'fas' | undefined;
+  iconWeight?: 'fab';
   iconSize?: FontProperties['fontSize'];
   iconColor?: ColorProperties;
   spin?: boolean;
@@ -49,7 +47,7 @@ const StyledIcon = styled.div<
 
 export const Icon: FC<IconProps> = ({
   icon,
-  iconWeight = 'fal',
+  iconWeight = 'fab',
   iconSize = 'sm',
   iconColor = { scalable: { color: 'gray' } },
   spin = false,
