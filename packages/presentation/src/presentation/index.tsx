@@ -19,7 +19,11 @@ import {
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 import {DesignSystems} from "./slides/DesignSystems";
-import {DesignSystemsOnTheWeb} from "./slides/DesignSystemsOnTheWeb";
+import {
+  DesignSystemsOnTheWeb_1,
+  DesignSystemsOnTheWeb_2,
+  DesignSystemsOnTheWeb_3, DesignSystemsOnTheWeb_4
+} from "./slides/DesignSystemsOnTheWeb";
 
 const images = {
   formidagon: require("../assets/formidable-logo.svg"),
@@ -43,7 +47,7 @@ const theme = createTheme(
 );
 
 export const Presentation: FC = () => (
-  <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
+  <Deck theme={theme}>
     <Slide transition={["zoom"]} bgColor="primary">
       <Heading size={1} fit caps lineHeight={1} textColor="secondary">
         Spectacle Boilerplate
@@ -56,7 +60,16 @@ export const Presentation: FC = () => (
       <DesignSystems />
     </Slide>
     <Slide transition={["slide"]} bgColor="primary">
-      <DesignSystemsOnTheWeb />
+      <DesignSystemsOnTheWeb_1 />
+    </Slide>
+    <Slide bgColor="primary">
+      <DesignSystemsOnTheWeb_2 />
+    </Slide>
+    <Slide bgColor="primary">
+      <DesignSystemsOnTheWeb_3 />
+    </Slide>
+    <Slide bgColor="primary">
+      <DesignSystemsOnTheWeb_4 />
     </Slide>
     <Slide transition={["fade"]} bgColor="tertiary">
       <Heading size={6} textColor="primary" caps>
