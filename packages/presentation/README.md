@@ -1,64 +1,44 @@
-[![Maintenance Status][maintenance-image]](#maintenance-status)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Spectacle Boilerplate
+## Available Scripts
 
-## Contents
+In the project directory, you can run:
 
-- [Reference](#reference)
-- [Getting Started](#getting-started)
-- [Tutorial](#tutorial)
-- [Build & Deployment](#build-deployment)
+### `npm start`
 
-## Reference
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The Spectacle core API is available in the [Spectacle Docs](https://github.com/FormidableLabs/spectacle/blob/master/README.md).
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-## Getting Started
+### `npm test`
 
-1. Download the boilerplate
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-   ```sh
-   git clone git@github.com:FormidableLabs/spectacle-boilerplate.git
-   ```
+### `npm run build`
 
-2. Remove existing version control
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-   ```sh
-   rm -R .git
-   ```
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-3. Install dependencies
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-   ```sh
-   yarn install
-   ```
+### `npm run eject`
 
-4. Start the webpack server. The server will run at [`localhost:3000`](http://localhost:3000).
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-   ```sh
-   yarn start
-   ```
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Tutorial
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-If want you a step-by-step guide for getting started with Spectacle, a basic tutorial is available [here](https://github.com/FormidableLabs/spectacle/blob/master/docs/tutorial.md).
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Build & Deployment
+## Learn More
 
-Building the dist version of the project is as easy as running
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-```sh
-yarn build
-```
-
-If you want to deploy the slideshow to surge, run
-
-```sh
-yarn deploy
-```
-
-## Maintenance Status
-
-**Active:** Formidable is actively working on this project, and we expect to continue for work for the foreseeable future. Bug reports, feature requests and pull requests are welcome. 
-
-[maintenance-image]: https://img.shields.io/badge/maintenance-active-green.svg
+To learn React, check out the [React documentation](https://reactjs.org/).
