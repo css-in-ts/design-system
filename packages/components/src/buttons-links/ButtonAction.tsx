@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { IconName } from '@fortawesome/pro-light-svg-icons';
+import { IconName } from '@fortawesome/free-brands-svg-icons';
 import {
   HTMLButton,
   ColorProperties,
@@ -35,7 +35,7 @@ export const ButtonAction: FC<ButtonActionProps> = ({
   label,
   size = 'sm',
   icon = undefined,
-  iconWeight = 'fas',
+  iconWeight = 'fab',
   color = { scalable: { color: 'accent' } },
   ...restButtonProps
 }) => (
