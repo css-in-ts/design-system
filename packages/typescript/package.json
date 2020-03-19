@@ -1,5 +1,5 @@
 {
-  "name": "@typesafe-design/typescript",
+  "name": "@css-in-ts/typescript",
   "version": "0.1.0",
   "description": "Typescript configuration for ts-design",
   "main": "index.js",

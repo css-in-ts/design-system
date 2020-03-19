@@ -1,5 +1,5 @@
 {
-  "name": "typesafe-design",
+  "name": "css-in-ts",
   "version": "0.1.0",
   "description": "A methodology for building a set of utilities to implement 100% custom and type-safe design systems",
   "main": "index.js",
@@ -15,32 +15,32 @@
     "update": "npm run check -- -u && npm run bootstrap",
     "test": "jest",
     "lint:fix": "eslint './packages/**/src/**/*.js' --fix",
-    "build:legacy": "lerna run build --scope=@typesafe-design/legacy --stream",
-    "build:website": "lerna run build --scope=@typesafe-design/website --stream",
-    "build:components": "lerna run build --scope=@typesafe-design/components --stream",
-    "build:components:storybook": "lerna run build-storybook --scope=@typesafe-design/components --stream",
-    "build:ds": "lerna run build --scope=@typesafe-design/design-system --stream",
-    "build:presentation": "npm run build:ds && npm run build:components && lerna run start --scope=@typesafe-design/presentation --stream",
-    "start:ds": "lerna run start --scope=@typesafe-design/design-system --stream",
-    "start:components": "npm run build:ds && lerna run start --scope=@typesafe-design/components --stream",
-    "start:components:storybook": "npm run build:ds && lerna run storybook --scope=@typesafe-design/components --stream",
-    "start:presentation": "npm run build:ds && npm run build:components && lerna run start --scope=@typesafe-design/presentation --stream"
+    "build:legacy": "lerna run build --scope=@css-in-ts/legacy --stream",
+    "build:website": "lerna run build --scope=@css-in-ts/website --stream",
+    "build:components": "lerna run build --scope=@css-in-ts/components --stream",
+    "build:components:storybook": "lerna run build-storybook --scope=@css-in-ts/components --stream",
+    "build:ds": "lerna run build --scope=@css-in-ts/design-system --stream",
+    "build:presentation": "npm run build:ds && npm run build:components && lerna run start --scope=@css-in-ts/presentation --stream",
+    "start:ds": "lerna run start --scope=@css-in-ts/design-system --stream",
+    "start:components": "npm run build:ds && lerna run start --scope=@css-in-ts/components --stream",
+    "start:components:storybook": "npm run build:ds && lerna run storybook --scope=@css-in-ts/components --stream",
+    "start:presentation": "npm run build:ds && npm run build:components && lerna run start --scope=@css-in-ts/presentation --stream"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/drewdecarme/typesafe-design.git"
+    "url": "git+https://github.com/drewdecarme/css-in-ts.git"
   },
   "keywords": [
     "typesafe",
     "design",
-    "typesafe-design"
+    "css-in-ts"
   ],
   "author": "Drew DeCarme (drew@imaginedelements.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/drewdecarme/typesafe-design/issues"
+    "url": "https://github.com/drewdecarme/css-in-ts/issues"
   },
-  "homepage": "https://github.com/drewdecarme/typesafe-design#readme",
+  "homepage": "https://github.com/drewdecarme/css-in-ts#readme",
   "devDependencies": {
     "eslint-config-react-app": "^5.1.0",
     "lerna": "^3.16.4"

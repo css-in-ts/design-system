@@ -4,12 +4,12 @@ import {
   HTMLButton,
   ColorProperties,
   FontProperties,
-} from '@typesafe-design/design-system/types/composite';
+} from '@css-in-ts/design-system/types/composite';
 
 import { Icon, Copy, IconProps } from '../typography';
 
 import styled from 'styled-components';
-import { makeReset, makeOutset } from '@typesafe-design/design-system/utils';
+import { makeReset, makeOutset } from '@css-in-ts/design-system/utils';
 
 type ButtonActionProps = HTMLButton & {
   label: string;

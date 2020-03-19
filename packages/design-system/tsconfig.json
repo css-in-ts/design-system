@@ -1,5 +1,5 @@
 {
-  "extends": "@typesafe-design/typescript/tsconfig.react.json",
+  "extends": "@css-in-ts/typescript/tsconfig.react.json",
   "include": ["src/configs", "src/types", "src/utils"],
   "compilerOptions": {
     "outDir": "./",

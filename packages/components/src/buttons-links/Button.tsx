@@ -5,9 +5,9 @@ import { darken } from 'polished';
 import {
   HTMLButton,
   ColorProperties,
-} from '@typesafe-design/design-system/types/composite';
-import { Color } from '@typesafe-design/design-system/types/primitive';
-import { makeColor, makeReset } from '@typesafe-design/design-system/utils';
+} from '@css-in-ts/design-system/types/composite';
+import { Color } from '@css-in-ts/design-system/types/primitive';
+import { makeColor, makeReset } from '@css-in-ts/design-system/utils';
 
 import { Icon, Copy } from '../typography';
 import { sharedFontSize } from '../shared';

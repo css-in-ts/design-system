@@ -4,8 +4,8 @@ import {
   SizeHeadings,
   HTMLHeading,
   ColorProperties,
-} from '@typesafe-design/design-system/types/composite';
-import { makeReset, makeFont } from '@typesafe-design/design-system/utils';
+} from '@css-in-ts/design-system/types/composite';
+import { makeReset, makeFont } from '@css-in-ts/design-system/utils';
 
 export type HeadingProps = HTMLHeading & {
   fontSize?: SizeHeadings;

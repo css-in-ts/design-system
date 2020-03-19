@@ -1,5 +1,5 @@
 {
-  "name": "@typesafe-design/project-typescript",
+  "name": "@css-in-ts/project-typescript",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

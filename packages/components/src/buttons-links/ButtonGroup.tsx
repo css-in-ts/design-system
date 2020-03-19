@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import styled, { SimpleInterpolation, css } from 'styled-components';
-import { Layout } from '@typesafe-design/design-system/types/primitive';
+import { Layout } from '@css-in-ts/design-system/types/primitive';
 
 import { StyledButton } from './Button';
 

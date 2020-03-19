@@ -30,7 +30,7 @@ Typescript React
 ```tsx
 // components/TestComponent.tsx
 
-import { makeColor, makeSpace, makeSize } from "@typesafe-design/utils";
+import { makeColor, makeSpace, makeSize } from "@css-in-ts/utils";
 
 export const TestComponent = () => (
   <div

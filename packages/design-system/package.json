@@ -1,5 +1,5 @@
 {
-  "name": "@typesafe-design/design-system",
+  "name": "@css-in-ts/design-system",
   "version": "0.1.0",
   "license": "MIT",
   "author": "Drew DeCarme (drew@imaginedelements.com)",
@@ -24,7 +24,7 @@
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
     "@types/styled-components": "^4.4.1",
-    "@typesafe-design/typescript": "^0.1.0",
+    "@css-in-ts/typescript": "^0.1.0",
     "husky": "^3.1.0",
     "npm-check-updates": "^4.0.1",
     "polished": "^3.4.2",

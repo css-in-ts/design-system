@@ -23,7 +23,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@typesafe-design/components",
+  "name": "@css-in-ts/components",
   "author": "Drew DeCarme (drew@imaginedelements.com)",
   "module": "dist/components.esm.js",
   "dependencies": {
@@ -43,8 +43,8 @@
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
     "@types/webpack-env": "^1.14.1",
-    "@typesafe-design/design-system": "^0.1.0",
-    "@typesafe-design/typescript": "^0.1.0",
+    "@css-in-ts/design-system": "^0.1.0",
+    "@css-in-ts/typescript": "^0.1.0",
     "babel-loader": "^8.0.6",
     "husky": "^3.1.0",
     "npm-check-updates": "^4.0.1",

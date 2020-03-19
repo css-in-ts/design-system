@@ -6,8 +6,8 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import {
   ColorProperties,
   FontProperties,
-} from '@typesafe-design/design-system/types/composite';
-import { makeColor, makeFont } from '@typesafe-design/design-system/utils';
+} from '@css-in-ts/design-system/types/composite';
+import { makeColor, makeFont } from '@css-in-ts/design-system/utils';
 
 library.add(fab);
 

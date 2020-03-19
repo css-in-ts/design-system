@@ -4,8 +4,8 @@ import {
   HTMLParagraph,
   ColorProperties,
   FontProperties,
-} from '@typesafe-design/design-system/types/composite';
-import { makeReset, makeFont } from '@typesafe-design/design-system/utils';
+} from '@css-in-ts/design-system/types/composite';
+import { makeReset, makeFont } from '@css-in-ts/design-system/utils';
 
 export type CopyProps = HTMLParagraph & {
   type: 'caption' | 'text' | 'label' | 'paragraph';

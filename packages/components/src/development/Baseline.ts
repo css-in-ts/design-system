@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-import { sizeConfig } from "@typesafe-design/design-system/configs";
+import { sizeConfig } from "@css-in-ts/design-system/configs";
 
 export const Baseline = createGlobalStyle`
   :root{
