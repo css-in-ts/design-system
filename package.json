@@ -43,6 +43,9 @@
   "homepage": "https://github.com/drewdecarme/css-in-ts#readme",
   "devDependencies": {
     "eslint-config-react-app": "^5.1.0",
-    "lerna": "^3.16.4"
+    "lerna": "^3.20.2"
+  },
+  "dependencies": {
+    "tsdx": "^0.12.3"
   }
 }
