@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Typescript configuration for ts-design",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "test"
   },
