@@ -7,7 +7,7 @@
     "clean": "lerna clean --yes && lerna exec -- rimraf lib/ dist/",
     "bootstrap": "lerna bootstrap --force-local --hoist && rm -rf node_modules/@types/react-native",
     "bootstrap:ci": "lerna bootstrap",
-    "version": "npm run build && lerna version --yes",
+    "version": "lerna version --yes",
     "reset": "npm run clean && npm run bootstrap",
     "release": "npm run build:ds && npm run build:components && lerna publish --yes",
     "compile": "lerna run compile",
