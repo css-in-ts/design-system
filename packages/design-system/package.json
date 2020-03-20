@@ -1,6 +1,9 @@
 {
   "name": "@css-in-ts/design-system",
   "version": "0.2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "author": "Drew DeCarme (drew@imaginedelements.com)",
   "files": [
