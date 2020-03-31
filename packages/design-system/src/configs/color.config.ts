@@ -11,9 +11,9 @@ export const colorConfig: ColorConfig = {
     dark: "#000"
   },
   scalable: {
-    primary: "#bf9f5a",
-    secondary: "#4e8588",
-    accent: "#9ac371",
+    primary: "#178d7d",
+    secondary: "#1d6c9eff",
+    accent: "#ee7d0f",
     gray: "#4a4a4a",
     light: "#eaecec",
     success: "#29a784",
