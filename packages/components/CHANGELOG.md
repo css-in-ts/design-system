@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/css-in-ts/design-system/compare/@css-in-ts/components@0.2.2...@css-in-ts/components@0.2.3) (2020-03-31)
+
+**Note:** Version bump only for package @css-in-ts/components
+
+
+
+
+
 ## [0.2.2](https://github.com/css-in-ts/design-system/compare/@css-in-ts/components@0.2.1...@css-in-ts/components@0.2.2) (2020-03-31)
 
 **Note:** Version bump only for package @css-in-ts/components
