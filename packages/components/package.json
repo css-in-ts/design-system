@@ -1,5 +1,5 @@
 {
-  "version": "0.2.1",
+  "version": "0.2.2",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
-    "@css-in-ts/design-system": "^0.2.1",
+    "@css-in-ts/design-system": "^0.2.2",
     "@css-in-ts/typescript": "^0.1.1",
     "@storybook/addon-actions": "^5.2.8",
     "@storybook/addon-links": "^5.2.8",
