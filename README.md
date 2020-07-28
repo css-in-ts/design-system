@@ -1,4 +1,6 @@
-# Typesafe Design System
+## **NOTE**: This repo is in flux and shouldn't be used in a production system. However, the concepts are real and can be used in a any kind of implementation that uses TS.
+
+# Typesafe Design Systems
 
 A methodology that produces set of utilities designed to implement a completely custom, typesafe design system at scale.
 
