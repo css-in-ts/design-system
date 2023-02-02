@@ -43,6 +43,6 @@
   "homepage": "https://github.com/drewdecarme/typesafe-design#readme",
   "devDependencies": {
     "eslint-config-react-app": "^5.1.0",
-    "lerna": "^3.16.4"
+    "lerna": "^6.4.1"
   }
 }
